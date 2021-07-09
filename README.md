@@ -30,4 +30,4 @@ $ kubectl get nodes
 ```
 And you should see all the nodes **READY**.
 
-PS: Will download good amount of images :p make sure to have enough data.
+PS: Will download a good amount of images :p make sure to have enough data.
