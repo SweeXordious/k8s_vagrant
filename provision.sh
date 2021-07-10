@@ -28,6 +28,8 @@ if test "$HOSTNAME" = master ; then
     mkdir -p /vagrant/config
     kubeadm token create $(kubeadm token generate) --print-join-command --ttl=0 > /vagrant/config/kube_token
     sudo ufw allow 6443
+
+    cp $HOME/.kube/config /vagrant/config/config
 else 
     sudo bash /vagrant/config/kube_token
 fi

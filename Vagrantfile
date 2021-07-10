@@ -16,7 +16,7 @@ Vagrant.configure("2") do |config|
             end
 
             host.vm.hostname = hostname
-            host.vm.network "public_network", ip: ip
+            host.vm.network "private_network", ip: ip, adapter: 2
 
             config.vm.synced_folder ".", "/vagrant"
 			host.vm.provision "shell", path: "provision.sh", privileged: false

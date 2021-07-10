@@ -21,7 +21,6 @@ $ cd k8s_vagrant
 ```ssh
 $ vagrant up
 ```
-You will be prompted to choose which network interface to use, choose wisely :D
 
 #### Check if everything is alright
 ```ssh
@@ -29,5 +28,14 @@ $ vagrant ssh master
 $ kubectl get nodes
 ```
 And you should see all the nodes **READY**.
+
+
+### Use the cluster from your host machine
+The configuration file is already exported under: `k8s_vagrant/config/config` after provisioning the nodes. All you need to do is copy the file to your host:
+```ssh
+$ cp config/config $HOME/.kube
+$ kubectl get nodes
+```
+And you should see all the nodes.
 
 PS: Will download a good amount of images :p make sure to have enough data.
